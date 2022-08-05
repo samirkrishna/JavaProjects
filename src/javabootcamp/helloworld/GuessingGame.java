@@ -1,5 +1,8 @@
 package javabootcamp.helloworld;
 
+/**
+ * @author Samir Krishna
+ */
 
 import java.util.Scanner;
 
@@ -37,9 +40,9 @@ class Guesser {
 
 class Player {
 
-    public int playerAnswer() {
+    public int playerAnswer(int playerNo) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Player Guess a number");
+        System.out.println("Player"+playerNo+ " Guess a number");
         int playerAnswer = sc.nextInt();
         return playerAnswer;
     }
@@ -56,9 +59,9 @@ class Umpire {
         guessedNumber = guesser.guessANumber();
 
         Player p = new Player();
-        player1Answer = p.playerAnswer();
-        player2Answer = p.playerAnswer();
-        player3Answer = p.playerAnswer();
+        player1Answer = p.playerAnswer(1);
+        player2Answer = p.playerAnswer(2);
+        player3Answer = p.playerAnswer(3);
     }
 
     public String getWinner() {
